@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!------------------------ clock----------------------->
+    <div class="main">
+        <div class="clock">
+            <p class="show_time" id="show_time">10:15:37</p> <br>
+            <!-- <p class="show_date" id="show_date">2022-25-25</p> -->
+        </div>
+        <p class="show_date" id="show_date">2022-25-25</p>
+    </div>
+    <!------------------------ table of days----------------------->
+    <div class="listJob">
+        <div  id="saturday">
+            <span>SAT</span>
+            <!-- <input type="checkbox">
+            <p>car</p>
+            <input type="checkbox">
+            <p>loptop</p>
+            <p>mobile</p>
+            <p>car</p>
+            <p>loptop</p>
+            <p>mobile</p> -->
+        </div>
+
+        <div id="sunday">
+            <span>SUN</span>
+        </div>
+
+        <div id="monday">
+            <span>MON</span>
+        </div>
+
+        <div id="tuesday">
+            <span>TUE</span>
+        </div>
+
+        <div id="wednesday">
+            <span>WED</span>
+        </div>
+
+        <div id="thursday">
+            <span>THU</span>
+        </div>
+
+        <div id="friday">
+            <span>FRI</span>
+        </div>
+
+        <div class="result">
+            <span class="performanceText">PERFORMANCE :</span>
+            <section class="partA">
+                <button id="arzyabi">Assessment</button>
+                <span id="resultShow"></span>
+            </section>
+        </div>
+    </div>
+    <!------------------------ add new task----------------------->
+    <div class="addNewTask">
+        <input type="text" placeholder="Enter new Task" id="textInput">
+        <!------------------------ select of  days----------------------->
+        <select name="" id="selectDay" class="days">
+            <option value="saturday">Saturday</option>
+            <option value="sunday">Sunday</option>
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+        </select>
+        <button class="btnAddTask" id="BtnAddTask">Add</button>
+    </div>
+
+    <div class="today">
+        <span class="todayText">Today :</span> <span class="daysOfToday" id="spanDaysShow">mon</span>
+        
+    </div>
+
+    <script src="js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+body {
+
+    background-image: url("../clock/pic/new.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+
+.clock {
+    width: 160px;
+    height: 74px;
+    border: 10px solid silver;
+    border-radius: 20px;
+    background-color: #b18d8d8f;
+    top: 27px;
+    position: absolute;
+    right: 48px;
+    display: flex;
+}
+
+.clock .show_time {
+    font-size: 40px;
+    margin: 13px auto;
+    display: block;
+}
+
+.show_date {
+    font-size: 29px;
+    color: brown;
+    position: absolute;
+    bottom: -19px;
+    right: 32px;
+    border: 2px solid burlywood;
+    padding: 15px;
+    border-radius: 60px;
+}
+
+/************************ tble of job ************************/
+.listJob {
+    width: 784px;
+    height: 413px;
+
+    position: absolute;
+    top: 127px;
+    right: 49px;
+}
+
+
+.listJob div {
+    border: 2px solid black;
+    width: 31.5%;
+    height: 127px;
+    float: left;
+    margin: 5px;
+    overflow: overlay;
+}
+
+.result {
+    width: 506px !important;
+}
+
+.result span {
+    margin-left: 10px !important;
+
+}
+
+.listJob div span {
+    margin: 6px 103px;
+    color: rgb(136 65 195);
+    font-size: 17px;
+}
+
+.performanceText {
+    padding: 13px;
+}
+
+/*----------------------------add task-----------------------*/
+
+.addNewTask {
+    border: 2px solid darkblue;
+    width: 392px;
+    height: 250px;
+    position: absolute;
+    top: 19px;
+    left: 21px;
+    padding: 11px;
+    background-color: rgba(189, 183, 107, 0.589);
+}
+
+.addNewTask input {
+    height: 30px;
+    width: 385px;
+}
+
+.btnAddTask {
+    display: block;
+    width: 50%;
+    height: 30%;
+    font-size: 23px;
+    margin: 57px auto;
+}
+
+.btnAddTask:hover {
+    background-color: aqua;
+    transition: all 2s;
+
+}
+
+.days {
+    margin: 15px 131px;
+    width: 113px;
+    height: 31px;
+}
+
+/*-------js ---------*/
+.activeDay {
+    background-color: rgba(89, 117, 37, 0.39);
+}
+
+.listJob div p {
+    margin-left: 28px;
+    /* margin-top: -20px; */
+    font-size: 20px;
+}
+ .listJobi input {
+    display: inline;
+ }
+
+ /* --------------today -------------------*/
+ .today {
+    position: absolute;
+    bottom: 30px;
+    right: 300px;
+ }
+.todayText{
+    font-size: 24px;
+    color: rgb(30, 93, 210);
+}
+.daysOfToday{
+    font-size: 23px;
+    color: rgb(210, 30, 75);
+}
+
+
+/*-----------------performance----------------*/
+
+.partA{
+    position: absolute;
+    right: 0;
+    top: 341px;
+}
+.partA button{
+    margin-right: 20px;
+    width: 124px;
+    height: 33px;
+    font-size: 15px;
+}
+.partA span{
+   color: black !important;
+   font-size: 25px !important;
+}
