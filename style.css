@@ -7,11 +7,11 @@ body {
 
 
 .clock {
-    width: 160px;
+    width: 190px;
     height: 74px;
-    border: 10px solid silver;
+    border: 3px solid slategrey;
     border-radius: 20px;
-    background-color: #b18d8d8f;
+    background-color: #4caf503b;
     top: 27px;
     position: absolute;
     right: 48px;
@@ -22,24 +22,26 @@ body {
     font-size: 40px;
     margin: 13px auto;
     display: block;
+    font-family: monospace;
 }
 
 .show_date {
     font-size: 29px;
-    color: brown;
+    color: #460f0f;
     position: absolute;
     bottom: -19px;
-    right: 32px;
-    border: 2px solid burlywood;
-    padding: 15px;
-    border-radius: 60px;
+    right: 55px;
+    border: 2px solid #3c5e1b;
+    padding: 8px;
+    border-radius: 10px;
+    font-family: system-ui;
 }
 
 /************************ tble of job ************************/
 .listJob {
-    width: 784px;
+    width: 787px;
     height: 413px;
-
+    font-family:cursive;
     position: absolute;
     top: 127px;
     right: 49px;
@@ -129,8 +131,9 @@ body {
  /* --------------today -------------------*/
  .today {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     right: 300px;
+    font-family: sans-serif;
  }
 .todayText{
     font-size: 24px;
@@ -158,4 +161,17 @@ body {
 .partA span{
    color: black !important;
    font-size: 25px !important;
+}
+
+/* new */ 
+.bottomLine{
+    height: 1px;
+    background-color: black;
+}
+.shadow {
+    box-shadow: 5px 10px 8px #888888;
+   border-radius: 10px;
+}
+.mondayclass {
+    overflow-y: hidden;
 }

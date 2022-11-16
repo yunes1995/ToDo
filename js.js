@@ -7,7 +7,7 @@ function show_time() {
     var years = d.getFullYear();
     var month = d.getMonth();
     var days = d.getDay();
-
+    
     if (hours < 10) { hours = "0" + hours };
     if (minutes < 10) { minutes = "0" + minutes };
     if (second < 10) { second = "0" + second };
