@@ -70,6 +70,7 @@ body {
     margin: 6px 103px;
     color: rgb(136 65 195);
     font-size: 17px;
+    font-weight: bold;
 }
 
 .performanceText {
@@ -86,33 +87,48 @@ body {
     top: 19px;
     left: 21px;
     padding: 11px;
-    background-color: rgba(189, 183, 107, 0.589);
+    background-color: rgb(107 189 176 / 10%);
 }
 
 .addNewTask input {
     height: 30px;
     width: 385px;
+    padding: 3px;
+    font-family: monospace;
 }
 
 .btnAddTask {
     display: block;
-    width: 50%;
-    height: 30%;
+    width: 44%;
+    height: 25%;
     font-size: 23px;
-    margin: 57px auto;
+    margin: 8px auto;
+    font-family: cursive;
 }
 
 .btnAddTask:hover {
-    background-color: aqua;
+    background-color: rgba(255, 166, 0, 0.274);
+    border-radius: 15px;
     transition: all 2s;
 
 }
 
 .days {
-    margin: 15px 131px;
+    margin: 15px 143px;
     width: 113px;
     height: 31px;
+    font-family: cursive;
 }
+
+.titleOfAddNewTask{
+    margin-left: 138px;
+    font-size: 22px;
+    margin-left: 125px;
+    font-size: 22px;
+    font-family: cursive;
+    color: brown;
+}
+
 
 /*-------js ---------*/
 .activeDay {
@@ -153,7 +169,8 @@ body {
     top: 341px;
 }
 .partA button{
-    margin-right: 20px;
+    /* margin-right: 20px; */
+    margin-right: -6px;
     width: 124px;
     height: 33px;
     font-size: 15px;

@@ -53,7 +53,17 @@ function AddTaskToApp() {
     }
 
 }
+const getAddNewTaskBox = document.querySelector(".addNewTask");
 
+getAddNewTaskBox.addEventListener("mouseover" , () => {
+    // document.querySelector(".addNewTask").style.backgroundColor = "red";
+    getAddNewTaskBox.style.backgroundColor = "rgb(107 189 176 / 82%)";
+});
+getAddNewTaskBox.addEventListener("mouseout" , () => {
+    getAddNewTaskBox.style.backgroundColor = "rgb(107 189 176 / 10%)";
+})
+
+console.log(getAddNewTaskBox);
 /*--------------------performance----------------------*/
 
 const btnAsseg = document.getElementById("arzyabi");
