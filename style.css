@@ -29,7 +29,7 @@ body {
     font-size: 29px;
     color: #460f0f;
     position: absolute;
-    bottom: -19px;
+    bottom: -26px;
     right: 55px;
     border: 2px solid #3c5e1b;
     padding: 8px;
@@ -248,12 +248,6 @@ body {
     background-color: #460f0f46;
 }
 
-.opLess{
-    opacity: 0.4;
-}
-.pTask{
-    opacity: 1 !important;
-}
 
 /* ------------------my change END ---------------*/
 
@@ -280,6 +274,7 @@ body {
     display: block;
     transition: 0.3s;
     margin-bottom : 27px;
+    cursor: pointer;
   }
   
   /* When you mouse over the navigation links, change their color */

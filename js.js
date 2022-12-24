@@ -213,18 +213,25 @@ let forTest = () => {
 
 // add new fautur
 
-
+let getAllTaskLink = document.getElementById("AllTask");
+let getActiveLink = document.getElementById("ActiveLink");
+let getCompletedTaskLink = document.getElementById("CompletedTask");
 function AllTask(){
-    let getActiveLink = document.getElementById("ActiveLink");
-    getActiveLink.style.color = "red";
+  
+    getAllTaskLink.style.color = "yellow";
+    getActiveLink.style.color = "#818181";
+    getCompletedTaskLink.style.color = "#818181";
     const getPtask = document.querySelectorAll(".pTask");
     getPtask.forEach(task =>{
         task.style.display = "block";
     });
 }
 function ActiveTask(){
-    let getActiveLink = document.getElementById("ActiveLink");
+    
+    getAllTaskLink.style.color = "#818181";
     getActiveLink.style.color = "red";
+    getCompletedTaskLink.style.color = "#818181";
+
     const getPtask = document.querySelectorAll(".pTask");
     getPtask.forEach(task =>{
         task.style.display = "block";
@@ -236,8 +243,10 @@ function ActiveTask(){
 }
 function DoneTask(){
 
-    let getActiveLink = document.getElementById("ActiveLink");
-    getActiveLink.style.color = "red";
+    
+    getAllTaskLink.style.color = "#818181";
+    getActiveLink.style.color = "#818181";
+    getCompletedTaskLink.style.color = "green";
     const getPtask = document.querySelectorAll(".pTask");
     getPtask.forEach(task =>{
         task.style.display = "none";
