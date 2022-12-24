@@ -120,12 +120,26 @@ function AddTaskToApp() {
         EditBtn.innerText = "Edit";
         EditBtn.className ="BtnEdit";
         creatnewP.appendChild(EditBtn);
+        
+        EditBtn.addEventListener("click" , EditTask);
+        function EditTask(){
+            creatnewP.contentEditable = true;
+            EditBtn.style.display = "none";
+            DoneEdit.style.display = "inline";
+        }
 
         let DoneEdit = document.createElement("button");
         DoneEdit.innerText = "ok";
         DoneEdit.className ="DoneEdit";
+        DoneEdit.style.display = "none";
         creatnewP.appendChild(DoneEdit);
 
+        DoneEdit.addEventListener("click" , DoneEditFunc);
+        function DoneEditFunc(){
+            creatnewP.contentEditable = false;
+            EditBtn.style.display = "inline"
+            DoneEdit.style.display = "none"
+        }
         
         /*new*/
         creatBtn.addEventListener("click", deleteTask)
