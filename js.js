@@ -84,6 +84,11 @@ function AddTaskToApp() {
     }
     function addToDo(counterBeforTask) {
         counter++;
+        /* new*/ 
+        // let creatSpan = document.createElement("span");
+        // creatSpan.innerText = counterBeforTask;
+        // choseDay.appendChild(creatSpan);
+        /* new*/ 
         let creatnewP = document.createElement("p");
         creatnewP.style.color = "red";
         creatnewP.innerText = ` ${counterBeforTask}- ${getTextToAdd.value}`
@@ -110,6 +115,19 @@ function AddTaskToApp() {
         creatBtn.className = "BtnDelete";
         creatBtn.innerText = "delete";
         creatnewP.appendChild(creatBtn);
+        /*new*/
+        let EditBtn = document.createElement("button");
+        EditBtn.innerText = "Edit";
+        EditBtn.className ="BtnEdit";
+        creatnewP.appendChild(EditBtn);
+
+        let DoneEdit = document.createElement("button");
+        DoneEdit.innerText = "ok";
+        DoneEdit.className ="DoneEdit";
+        creatnewP.appendChild(DoneEdit);
+
+        
+        /*new*/
         creatBtn.addEventListener("click", deleteTask)
         function deleteTask() {
             creatBtn.parentNode.remove();
