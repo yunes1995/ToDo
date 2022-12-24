@@ -91,6 +91,8 @@ function AddTaskToApp() {
         /* new*/ 
         let creatnewP = document.createElement("p");
         creatnewP.style.color = "red";
+        creatnewP.className = "pTask";
+        
         creatnewP.innerText = ` ${counterBeforTask}- ${getTextToAdd.value}`
         choseDay.appendChild(creatnewP);
         getTextToAdd.value = "";
@@ -104,10 +106,12 @@ function AddTaskToApp() {
             if (!ceratcheck.checked) {
                 let test = ceratcheck.parentNode;
                 test.style.color = "red";
+                test.classList.remove("done");
             }
             if (ceratcheck.checked) {
                 let test = ceratcheck.parentNode;
                 test.style.color = "green";
+                test.classList.add("done");
             }
         });
         // add button delete 
@@ -207,3 +211,48 @@ let forTest = () => {
 }
 
 
+// add new fautur
+
+
+function AllTask(){
+    let getActiveLink = document.getElementById("ActiveLink");
+    getActiveLink.style.color = "red";
+    const getPtask = document.querySelectorAll(".pTask");
+    getPtask.forEach(task =>{
+        task.style.display = "block";
+    });
+}
+function ActiveTask(){
+    let getActiveLink = document.getElementById("ActiveLink");
+    getActiveLink.style.color = "red";
+    const getPtask = document.querySelectorAll(".pTask");
+    getPtask.forEach(task =>{
+        task.style.display = "block";
+        if(task.classList.contains("done")){
+            task.style.display = "none";
+        }
+    });
+
+}
+function DoneTask(){
+
+    let getActiveLink = document.getElementById("ActiveLink");
+    getActiveLink.style.color = "red";
+    const getPtask = document.querySelectorAll(".pTask");
+    getPtask.forEach(task =>{
+        task.style.display = "none";
+        if(task.classList.contains("done")){
+            task.style.display = "block";
+        }
+    });
+
+}
+/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  /* Set the width of the side navigation to 0 */
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }

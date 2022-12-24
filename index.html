@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="body">
     <!------------------------ clock----------------------->
+    
     <div class="main">
         <div class="clock">
             <p class="show_time" id="show_time">10:15:37</p> <br>
@@ -65,6 +66,7 @@
             </section>
         </div>
     </div>
+
     <!------------------------ add new task----------------------->
     <div class="addNewTask shadow">
         <p class="titleOfAddNewTask">ToDo List App</p>
@@ -86,7 +88,18 @@
         <span class="todayText">Today :</span> <span class="daysOfToday" id="spanDaysShow">mon</span>
         
     </div>
-
+    <!--new featur-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+        <a onclick="AllTask()">ALL</a>
+        <a onclick="ActiveTask()" id="ActiveLink">Active</a>
+        <a onclick="DoneTask()">Completed</a>
+      </div>
+      
+      <!-- Use any element to open the sidenav -->
+      <span onclick="openNav()" class="showList">List ToDo</span>
+      
     <script src="js.js"></script>
 </body>
 
