@@ -56,7 +56,11 @@ body {
     margin: 5px;
     overflow: overlay;
 }
-
+.listJob div:hover{
+    border: 2px solid rgba(250, 9, 41, 0.836);
+    background-color: #4ca3af44;
+    
+}
 .result {
     width: 506px !important;
 }
@@ -128,8 +132,18 @@ body {
     font-family: cursive;
     color: brown;
 }
-
-
+.listJob div p input{
+    margin-left: 15px;
+}
+.BtnDelete{
+    margin-left: 12px;
+    
+    height: 20px;
+}
+.BtnDelete:hover{
+   border: 1px solid red;
+   cursor: pointer;
+}
 /*-------js ---------*/
 .activeDay {
     background-color: rgba(89, 117, 37, 0.39);
@@ -179,7 +193,19 @@ body {
    color: black !important;
    font-size: 25px !important;
 }
-
+#arzyabi:hover{
+    background-color: aquamarine;
+    padding: 3px;
+    border: 2px solid seagreen;
+    cursor: pointer;
+    border-radius: 4px;
+}
+#resultShow{
+    margin: 6px 40px !important;
+    color: rgb(136 65 195);
+    font-size: 17px;
+    font-weight: bold;
+}
 /* new */ 
 .bottomLine{
     height: 1px;

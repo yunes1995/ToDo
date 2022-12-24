@@ -7,7 +7,7 @@ function show_time() {
     var years = d.getFullYear();
     var month = d.getMonth();
     var days = d.getDay();
-    
+
     if (hours < 10) { hours = "0" + hours };
     if (minutes < 10) { minutes = "0" + minutes };
     if (second < 10) { second = "0" + second };
@@ -32,38 +32,123 @@ let counter = 0;
 const btnAdd = document.getElementById("BtnAddTask");
 const getTextToAdd = document.getElementById("textInput");
 
-
-
 btnAdd.addEventListener("click", AddTaskToApp);
+
+let satCounter = 0;
+let sunCounter = 0;
+let monCounter = 0;
+let tueCounter = 0;
+let wedCounter = 0;
+let thurCounter = 0;
+let firCounter = 0;
+let flagForDone = false;
 
 function AddTaskToApp() {
 
     let whichDays = document.getElementById("selectDay");
     let choseDay = document.getElementById(`${whichDays.value}`);
 
-    console.log(counter)
     if (getTextToAdd.value == "") {
         alert("Insert The New Task")
-    } else {
+    }
+    else {
+
+        if (whichDays.value == "saturday") {
+            satCounter++;
+            addToDo(satCounter);
+        }
+        if (whichDays.value == "sunday") {
+            sunCounter++;
+            addToDo(sunCounter);
+        }
+        if (whichDays.value == "monday") {
+            monCounter++;
+            addToDo(monCounter);
+        }
+        if (whichDays.value == "tuesday") {
+            tueCounter++;
+            addToDo(tueCounter);
+        }
+        if (whichDays.value == "wednesday") {
+            wedCounter++;
+            addToDo(wedCounter);
+        }
+        if (whichDays.value == "thursday") {
+            thurCounter++;
+            addToDo(thurCounter);
+        }
+        if (whichDays.value == "friday") {
+            firCounter++;
+            addToDo(firCounter);
+        }
+    }
+    function addToDo(counterBeforTask) {
         counter++;
         let creatnewP = document.createElement("p");
-        creatnewP.innerText = ` ✻ ${getTextToAdd.value}`
+        creatnewP.style.color = "red";
+        creatnewP.innerText = ` ${counterBeforTask}- ${getTextToAdd.value}`
         choseDay.appendChild(creatnewP);
         getTextToAdd.value = "";
-    }
 
+        // add check box 
+        let ceratcheck = document.createElement("input");
+        ceratcheck.setAttribute("type", "checkbox");
+        creatnewP.appendChild(ceratcheck);
+        // check for checked ?
+        ceratcheck.addEventListener("change", () => {
+            if (!ceratcheck.checked) {
+                let test = ceratcheck.parentNode;
+                test.style.color = "red";
+            }
+            if (ceratcheck.checked) {
+                let test = ceratcheck.parentNode;
+                test.style.color = "green";
+            }
+        });
+        // add button delete 
+        let creatBtn = document.createElement("button");
+        creatBtn.className = "BtnDelete";
+        creatBtn.innerText = "delete";
+        creatnewP.appendChild(creatBtn);
+        creatBtn.addEventListener("click", deleteTask)
+        function deleteTask() {
+            creatBtn.parentNode.remove();
+
+            if (whichDays.value == "saturday") {
+                satCounter--;
+            }
+            if (whichDays.value == "sunday") {
+                sunCounter--;
+            }
+            if (whichDays.value == "monday") {
+                monCounter--;
+            }
+            if (whichDays.value == "tuesday") {
+                tueCounter--;
+            }
+            if (whichDays.value == "wednesday") {
+                wedCounter--;
+            }
+            if (whichDays.value == "thursday") {
+                thurCounter--;
+            }
+            if (whichDays.value == "friday") {
+                firCounter--;
+            }
+
+        }
+    }
 }
+
 const getAddNewTaskBox = document.querySelector(".addNewTask");
 
-getAddNewTaskBox.addEventListener("mouseover" , () => {
-    // document.querySelector(".addNewTask").style.backgroundColor = "red";
+getAddNewTaskBox.addEventListener("mouseover", () => {
     getAddNewTaskBox.style.backgroundColor = "rgb(107 189 176 / 82%)";
 });
-getAddNewTaskBox.addEventListener("mouseout" , () => {
+getAddNewTaskBox.addEventListener("mouseout", () => {
     getAddNewTaskBox.style.backgroundColor = "rgb(107 189 176 / 10%)";
 })
 
-console.log(getAddNewTaskBox);
 /*--------------------performance----------------------*/
 
 const btnAsseg = document.getElementById("arzyabi");
@@ -75,16 +160,18 @@ function Assessment() {
     let x = + prompt("What percentage of the work did you do? (0-100)");
     let y = + prompt("How much progress did you make compared to last week? (0-100)");
     let z = + prompt("What percentage were you satisfied with yourself this week? (0-100)");
-    let result = x + y + z;
-    console.log(result);
-    if(result>300){
+    let result = (x + y + z)/3;
+
+    if (result > 300) {
         alert("The entered numbers are incorrect");
     }
-    else{
-        spanForShowResult.innerText = `Your score is ${result} of 100`;
+    else {
+        spanForShowResult.innerText = `Your score is ${parseInt(result)} of 100`;
     }
 
 }
-
+let forTest = () => {
+    console.log(satCounter)
+}
 
 
